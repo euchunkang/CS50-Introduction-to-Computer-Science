@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+<div>
+    <h3 style="text-align:center">Manual Entry Option</h3>
+</div>
+<form method="post" style="box-align:center">
+    <div>
+        <input autocomplete="off" autofocus class="form-control center-block" name="startpoint" placeholder="Start Point" type="text" style="width: auto">
+    </div>
+    <div>
+        <input autocomplete="off" autofocus class="form-control center-block" name="endpoint" placeholder="End Point" type="text" style="width: auto">
+    </div>
+    <div>
+        <input autocomplete="off" autofocus class="form-control center-block" name="nloc" placeholder="Number of Locations" type="text" style="width: auto">
+    </div>
+    <button class="btn btn-primary center-block" type="submit">Next</button>
+</form>
+{% endblock %}

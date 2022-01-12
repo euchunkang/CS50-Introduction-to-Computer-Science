@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+<div class="jumbotron" style="background-color: #696969; font-family: avenir;">
+    <h2>Welcome to OptiRoute!</h2>
+</div>
+<div class="talign">
+    <div class="boxstyle2 center-block">
+        <h3>How to Use</h3>
+        <p>OptiRoute is a route planner, that helps you to optimise travelling to multiple locations. You simply enter your starting and ending points, then choose one of the two methods to tell us where you want to go!</p>
+    </div>
+</div>
+<br>
+<div class="talign">
+    <div class="boxstyleleft">
+        <h4>Upload Excel File</h4>
+        <p>Upload your Excel file with your list of addresses. You can download the Excel template above.</p>
+        <div style="text-align: center">
+            <button class="btn btn-secondary"><a href="/preupload">Uploader</a></button>
+        </div>
+    </div>
+    <div class="boxstyleright">
+        <h4>Enter Addresses </h4>
+        <p>Enter the locations you want to go yourself if you do not wish to use the Excel template.</p>
+        <div style="text-align: center">
+            <button class="btn btn-secondary"><a href="/preentry">Entries</a></button>
+        </div>
+    </div>
+</div>
+<div class="filler"></div>
+{% endblock %}

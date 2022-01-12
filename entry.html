@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<div>
+  <h3 style="text-align: center">Enter Locations here</h3>
+</div>
+<div>
+<form method="POST" action="/entry" class="m-input center-block">
+    <table>
+    </table>
+    <button type="button" value="Cancel" class="addLocation">Add a Location</button>
+    <input id="num" type="hidden" value="{{nloc}}"/>
+    <input type="submit">
+</form>
+<script language="javascript" type="text/javascript">
+// initializing based on user's number of inputted locations
+for (var i = 1; i <= {{nloc}}; i++)
+{
+    var start = $('table');
+    const str = '<tr><td><input type="text" placeholder="Location ' + i + '" name="location-' + i +'" autocomplete="off"/></td>';
+    newRow = $(str);
+    $(start).append(newRow);
+}
+
+$('form').on('click', '.addLocation', function() {
+    var number = parseInt(document.getElementById('num').value) + 1;
+    console.log(number);
+    var start = $('table');
+    const str = '<tr><td><input type="text" placeholder="Location ' + number + '" name="location-' + number + '" autocomplete="off"/></td>';
+    document.getElementById('num').value = number;
+    newRow = $(str);
+    $(start).append(newRow);
+
+});
+</script>
+
+
+</div>
+{% endblock %}
